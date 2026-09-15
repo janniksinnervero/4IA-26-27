@@ -1,14 +1,17 @@
 #include <stdio.h>
 #define DIM 10
 
-int pari_disp (int vett, int *p, int *d, int i){
-    for(i=0; i<DIM; i++){
+int pari_disp (int *pari, int *disp){
+
+    int vett [DIM]={21, -9, 32, 9, 19, -41, 36, 1. -4, 6};
+
+    for(int i=0; i<DIM; i++){
         if (vett[i]%2==0){
-            *p++;
+            (*pari)++;
         }
 
         else{
-            *d++;
+            (*disp)++;
         }
     }
 }
@@ -16,10 +19,8 @@ int pari_disp (int vett, int *p, int *d, int i){
 int main(void){
     int pari=0;
     int disp=0;
-    int i=0;
-    int vet [DIM]={21, -9, 32, 9, 19, -41, 36, 1. -4, 6};
 
-    pari_disp(int vet, &pari, &disp, i);
+    pari_disp(&pari, &disp);
 
     printf("Valori pari: %d\n", pari);
     printf("Valori dispari: %d\n", disp);
