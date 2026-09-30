@@ -50,3 +50,25 @@ int contaValore(int _v[], int _dim, int _val, int _cnt);
 int ricercaSostituisci(int _v[], int _dim, int _src, int _sost, int _cnt);
 
 
+// prototipo - lib.h
+/** Carica un vettore con valori random compresi tra un valore minimo e un valore massimo
+ * @param int* Riferimento al vettore.
+ * @param int Dimensione del vettore.
+ * @param int Valore minimo.
+ * @param int Valore massimo.
+ */
+void caricaVett(int _v[], int _dim, int _min, int _max);
+
+// prototipo - lib.h
+/** Stampa un vettore in riga.
+ * @param int* Riferimento al vettore.
+ * @param int Dimensione del vettore.
+ */
+void stampaRiga(int _v[], int _dim);
+
+// prototipo - lib.h
+/** Calcola e restituisce la media di un vettore.
+ * @param int* Riferimento al vettore.
+ * @param int Dimensione del vettore.
+ */
+float mediaVett(int _v[], int _dim);

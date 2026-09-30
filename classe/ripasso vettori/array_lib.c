@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 void initArray(int _v[], int _dim){
   int i;
@@ -70,4 +72,32 @@ int ricercaSostituisci(int _v[], int _dim, int _src, int _sost, int _cnt){
   stampaVettore(_v, _dim);
 
   return _cnt;
+}
+
+void caricaVett(int _v[], int _dim, int _min, int _max){
+
+  srand(time(NULL));
+
+  for (int i=0; i<_dim; i++){
+    _v[i]=_min+rand()%(_max-_min+1);
+  }
+}
+
+void stampaRiga(int _v[], int _dim){
+  for(int i=0; i<_dim; i++){
+    printf("|%2d|", _v[i]);
+  }
+}
+
+float mediaVett(int _v[], int _dim){
+  int sum=0;
+  float tot=0;
+
+  for(int i=0; i<_dim; i++){
+    sum=sum+_v[i];
+  }
+
+  tot=sum/_dim;
+
+  return tot;
 }
