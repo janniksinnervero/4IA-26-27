@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
 
 void printMatrix(int _cols, int _rows, int _mat[_rows][_cols]){
     int cnt=0;
     
     for (int i=0; i<_rows; i++){
         for (int j=0; j<_cols; j++){
-            printf("%2d ", _mat[i][j]);
+            printf("%2d |", _mat[i][j]);
         }
         printf("\n");
     }
@@ -49,4 +51,33 @@ bool symmetricalMatrix(int l, int _mat[l][l]){
     else{
         return false;
     }
+}
+
+void caricaMat(int _rows, int _cols,  int _mat[_rows][_cols]){
+    srand(time(NULL));
+
+    for(int i=0; i<_rows; i++){
+        for(int j=0; j<_cols; j++){
+            _mat[i][j]=1+rand()%25;
+        }
+    }
+}
+
+bool caricaMat(int _dim, int _mat[_dim][_dim], int val1, int val2){
+    for(int i=0; i<_dim; i++){
+        for(int j=0; j<_dim; j++){
+            if(j>0){
+                if(_mat[i][j]==_mat[i][j-1]){
+                    return false;
+                }
+            }
+            if(i>0 && j==0){
+                if(_mat[i][j]==mat[i-1][j]){
+                    return false;
+                }
+            }
+        }
+    }
+    
+    return true;
 }
