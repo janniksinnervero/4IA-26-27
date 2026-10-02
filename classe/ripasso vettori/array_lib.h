@@ -72,3 +72,20 @@ void stampaRiga(int _v[], int _dim);
  * @param int Dimensione del vettore.
  */
 float mediaVett(int _v[], int _dim);
+
+// prototipo - lib.h
+/** Restituisce il valore all' indice selezionato.
+ * @param int* Riferimento al vettore.
+ * @param int Dimensione del vettore.
+ * @param int Indice scelto.
+ */
+int getValoreAt(int _v[], int _dim, int _index);
+
+// prototipo - lib.h
+/** Stampa a video il sotto array identificato fra due indici.
+ * @param int* Riferimento al vettore.
+ * @param int Dimensione del vettore.
+ * @param int Indice iniziale.
+ * @param int Indice finale.
+ */
+int getValoreAt(int _v[], int _dim, int _index1, int _index2);

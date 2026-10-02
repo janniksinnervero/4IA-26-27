@@ -101,3 +101,26 @@ float mediaVett(int _v[], int _dim){
 
   return tot;
 }
+
+int getValoreAt(int _v[], int _dim, int _index){
+  if(_index>=0 && _index<_dim){
+    return _v[_index];
+  }
+  else{
+    return -1;
+  }
+}
+ bool subVett(int _v[], int _dim, int _index1, int _index2){
+  if(_index1>_dim || _index1<0 || _index1>_index2 || _index2>_dim || _index2<0 || _index1==_index2){
+    printf("Qualcosa è andato storto.");
+    return false;
+  }
+
+  else{
+    for (int i=_index1; i<=_index2; i++){
+      printf(" I%d: %d |", i, _v[i]);
+    }
+
+    return true;
+  }
+}
