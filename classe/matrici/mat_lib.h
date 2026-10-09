@@ -53,6 +53,18 @@ void stampaAndSumRow(int _rows, int _cols, int _mat[_rows][_cols]);
  */
 void sumTriangoli(int _dim, int _mat[_dim][_dim]);
 
+/**Verifica se il vettore caricato è uguale ad almeno una riga della matrice.
+ * @param int* Numero righe matrice.  
+ * @param int Numero colonne matrice.
+ * @param int Matrice.
+ * @param int Vettore.
+ * @param int 0(vero) 1(falso)
+ */
+int arrayRowMatrix(int _rows, int _cols, int _mat[_rows][_cols], int _vet[_cols] int trueFalse);
+
+
+
+
 
 
 

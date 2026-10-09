@@ -112,3 +112,22 @@ void stampaAndSumRow(int _rows, int _cols, int _mat[_rows][_cols]){
         printf("SOMMA RIGA %d: %d\n", (i+1), vet[i]);
     }
 }
+
+int arrayRowMatrix(int _rows, int _cols, int _mat[_rows][_cols], int _vet[_cols], int trueFalse){
+    int vet2[_cols];
+    int valMat=0;
+    int valVet=0;
+    for(int i=0; i<_rows; i++){
+        for(int j=0; j<_cols; j++){
+            vet2[j]=_mat[i][j];
+
+        }
+        for (int j=0; j<_cols; j++){
+            if(vet2[j]!=_vet[j]){
+                trueFalse=1;
+            }
+
+        }
+    }
+    return trueFalse;
+}
