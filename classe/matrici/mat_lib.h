@@ -30,7 +30,30 @@ void caricaMat(int _rows, int _cols,  int _mat[_rows][_cols]);
  * @param int Primo valore.
  * @param int Secondo valore.
  */
-void caricaMat(int _dim, int _mat[_dim][_dim], int val1, int val2);
+void scacchieraMat(int _dim, int _mat[_dim][_dim], int val1, int val2);
+
+/** Calcola il valor medio della matrice.
+ * @param int* Numero righe matrice. 
+ * @param int* Numero colonne matrice.
+ * @param int Matrice.
+ * @param int Media.
+ */
+int mediaMat(int _rows, int _cols, int _mat[_rows][_cols], int _m);
+
+/** Stampa matrice con somma di ogni riga.
+ * @param int* Numero righe matrice. 
+ * @param int* Numero colonne matrice.
+ * @param int Matrice.
+ */
+void stampaAndSumRow(int _rows, int _cols, int _mat[_rows][_cols]);
+
+/** Somma dei triangoli della matrice.
+ * @param int* Dimensione matrice (quadrata). 
+ * @param int Matrice.
+ */
+void sumTriangoli(int _dim, int _mat[_dim][_dim]);
+
+
 
 
 

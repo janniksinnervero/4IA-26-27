@@ -63,7 +63,7 @@ void caricaMat(int _rows, int _cols,  int _mat[_rows][_cols]){
     }
 }
 
-bool caricaMat(int _dim, int _mat[_dim][_dim], int val1, int val2){
+bool scacchieraMat(int _dim, int _mat[_dim][_dim], int val1, int val2){
     for(int i=0; i<_dim; i++){
         for(int j=0; j<_dim; j++){
             if(j>0){
@@ -72,7 +72,7 @@ bool caricaMat(int _dim, int _mat[_dim][_dim], int val1, int val2){
                 }
             }
             if(i>0 && j==0){
-                if(_mat[i][j]==mat[i-1][j]){
+                if(_mat[i][j]==_mat[i-1][j]){
                     return false;
                 }
             }
@@ -80,4 +80,35 @@ bool caricaMat(int _dim, int _mat[_dim][_dim], int val1, int val2){
     }
     
     return true;
+}
+
+int mediaMat(int _rows, int _cols, int _mat[_rows][_cols], int _m){
+    int sum=0;
+    int div=0;
+
+    div=_rows*_cols;
+
+    for(int i=0; i<_rows; i++){
+        for(int j=0; j<_cols; j++){
+            sum+=_mat[i][j];
+        }
+    }
+    _m=sum/div;
+
+    return _m;
+}
+
+void stampaAndSumRow(int _rows, int _cols, int _mat[_rows][_cols]){
+    int vet[_rows];
+
+    for(int i=0; i<_rows; i++){
+        for(int j=0; j<_cols; j++){
+            printf("%2d|", _mat[i][j]); 
+            vet[i]+=_mat[i][j];
+        }
+        printf("\n");
+    }
+    for(int i=0; i<_rows; i++){
+        printf("SOMMA RIGA %d: %d\n", (i+1), vet[i]);
+    }
 }
