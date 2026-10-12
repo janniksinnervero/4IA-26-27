@@ -89,3 +89,31 @@ int getValoreAt(int _v[], int _dim, int _index);
  * @param int Indice finale.
  */
 int getValoreAt(int _v[], int _dim, int _index1, int _index2);
+
+
+//-------------------CATCHTHEPIN----------------------------
+// prototipo - lib.h
+/** Crea un codice con 5 numeri casuali 
+ * @param int* Vettore
+ * @param int Dimensione del vettore.
+ */
+void creaCodice(int _v[], int _dim);
+
+// prototipo - lib.h
+/** Richiede il codice all' utente
+ * @param int* Vettore
+ * @param int Dimensione del vettore.
+ * @param int Vettore di verifica.
+ */
+void richiediCodice(int _v[], int _dim, int _v2[]);
+
+// prototipo - lib.h
+/** Verifica se il codice corrisponde e stampa
+ * @param int* Vettore
+ * @param int Dimensione del vettore.
+ * @param int Vettore di verifica.
+ * @param int Numero tentativi.
+ */
+void verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt);
+
+//------------------------------------------------------------

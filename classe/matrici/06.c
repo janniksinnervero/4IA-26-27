@@ -19,6 +19,7 @@ int main(void){
     caricaMat(rows, cols, mat);
     caricaVett(vett, cols, min, max);
 
+    
     printMatrix(cols, rows, mat);
     stampaVettore(vett, cols);
 

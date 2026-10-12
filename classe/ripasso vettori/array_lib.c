@@ -124,3 +124,50 @@ int getValoreAt(int _v[], int _dim, int _index){
     return true;
   }
 }
+
+void creaCodice(int _v[], int _dim){
+
+  srand(time(NULL));
+
+  for (int i=0; i<_dim; i++){
+    _v[i]=0+rand()% (9-0+1);
+  }
+}
+
+void richiediCodice(int _v[], int _dim, int _v2[]){
+  for (int i=0; i<_dim; i++){
+    printf("Inserisci cifra da 0 a 9\n");
+    scanf("%d", &_v2[i]);
+    while(_v2[i]<0 || _v2[i]>9){
+      printf("Cifra non valida, riprova\n");
+      scanf("%d", &_v2[i]);
+    }
+  }
+}
+
+void verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt){
+  int false=0;
+
+  for (int i=0; i<_dim; i++){
+    if (_v[i]==_v2[i]){
+      printf("%d ", _v[i]);
+    }
+    else{
+      printf("? ");
+      false=1;
+    }
+
+    if(false==1){
+      _cnt++;
+      richiediCodice(int _v[], int _dim, int _v2[]);
+      verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt);
+    }
+
+    else{
+      for(int i=0; i<_dim; i++){
+        printf("%d ", _v[i]);
+      }
+      printf("\nNumero tentativi: %d", _cnt);
+    }
+  }
+}
