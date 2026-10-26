@@ -131,3 +131,31 @@ int arrayRowMatrix(int _rows, int _cols, int _mat[_rows][_cols], int _vet[_cols]
     }
     return trueFalse;
 }
+
+bool allDifferentM(int r, int c, int m[r][c]) {
+	for (int i = 0; i < r; i++)
+		for (int j = 0; j < c; j++) 		
+			for (int k = 0; k < r; k++)
+				for (int l = 0; l < c; l++) {
+					if (i == k && j == l)
+						continue;
+					if (m[i][j] == m[k][l])
+						return false;
+				}
+ 	return true;
+}
+
+void indexesDiffM(int l, int m[l][l]) {
+	for (int i = 0; i < l; i++) 
+		for (int j = 0; j < l; j++)
+			m[i][j] = i - j;
+}
+
+bool vMirrorM(int r, int c, int m[r][c]) {
+	for (int i = 0; i < r; i++) 
+		for (int j = 0; j < c / 2; j++)
+			if (m[i][j] != m[i][c - 1 - j])
+				return false;
+ 	return true;
+}
+

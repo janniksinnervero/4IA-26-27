@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
 
 void initArray(int _v[], int _dim){
@@ -146,7 +147,7 @@ void richiediCodice(int _v[], int _dim, int _v2[]){
 }
 
 void verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt){
-  int false=0;
+  int falso=0;
 
   for (int i=0; i<_dim; i++){
     if (_v[i]==_v2[i]){
@@ -154,10 +155,10 @@ void verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt){
     }
     else{
       printf("? ");
-      false=1;
+      falso=1;
     }
 
-    if(false==1){
+    if(falso==1){
       _cnt++;
       richiediCodice(int _v[], int _dim, int _v2[]);
       verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt);
@@ -171,3 +172,12 @@ void verificaStampaCodice(int _v[], int _dim, int _v2[], int _cnt){
     }
   }
 }
+
+void FibonacciV(int dim, int v[]) {
+	v[0] = 0; v[1] = 1;
+	for (int i = 2; i < dim; i++)
+		v[i] = v[i - 2] + v[i - 1];
+}
+
+
+
