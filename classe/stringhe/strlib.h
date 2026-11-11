@@ -11,5 +11,5 @@ void initStr(int _dim, char _str[]);
  * @param char* Riferimento al vettore.
  * @return Lunghezza calcolata.
  */
-int strLenght(int _dim, char _str[]);
+int strLenght( char _str[]);
 
